@@ -12,22 +12,27 @@ body {
 a, a:visited, a:hover, a:active {
   color: #DDD;
   text-decoration: none;
+  display: block;
 }
 
 ul {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 48%;
-  display: inline-block;
-  *display: inline;
-  zoom: 1
+  width: 100%;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  display: block;
+  text-align: center;
 }
 
 li {
   text-align: center;
-  margin: 1em;
+  margin: 1em 15%;
   padding: .5em;
+  width: 50%;
+  display: inline-block;
 }
 
 
