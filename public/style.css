@@ -38,19 +38,24 @@ li {
   /* border: 1px solid pink; */
 }
 
-h2 {
-  margin: .5em 0 .25em;
+h2, h3 {
+  margin: 1em 0 .25em;
 }
 
 h4 {
   margin: .25em 0;
 }
 
-#footer {
+#new-link {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  top: 0;
+  right: 0;
+  padding: .25em;
+  font-size: 50%;
+}
+
+#new {
+  
 }
 
 
@@ -58,7 +63,7 @@ h4 {
   font-size: 60%;
 }
 
-#old-link > a {
+#old-link > a, #new > a {
   text-decoration: underline;
 }
 

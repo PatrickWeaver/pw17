@@ -17,7 +17,25 @@ app.get("/data", function (req, res) {
       }, function(err, result) {
         // Put in-memory store for now
         data = result.cells;
-        res.send(data);
+
+        var keys = [];
+        for (var i in data) {
+          keys.push(i);
+        }
+        
+        keys.sort();
+        
+        var n = [];
+        
+        for (var j = 1; j < 4; j++) {
+        
+          n.push({
+            code: data[keys[keys.length - j]][1]["value"],
+            date: data[keys[keys.length - j]][2]["value"]
+          })
+        }
+
+        res.send({data: n});
       });
   });
   
