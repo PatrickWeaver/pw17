@@ -26,13 +26,13 @@ $(function() {
   $.get( "/data/", function ( data ) {
     loaded = true;
     $( "#new > div" ).hide();
-    $( "#new" ).append(data["data"][0]["date"]);
+    $( "#new" ).append("<span class='date'>" + data["data"][0]["date"] + "</span>");
     $( "#new" ).append(data["data"][0]["code"]);
     $( "#new" ).append("<br>");
-    $( "#new" ).append(data["data"][1]["date"]);
+    $( "#new" ).append("<span class='date'>" + data["data"][1]["date"] + "</span>");
     $( "#new" ).append(data["data"][1]["code"]);
     $( "#new" ).append("<br>");
-    $( "#new" ).append(data["data"][2]["date"]);
+    $( "#new" ).append("<span class='date'>" + data["data"][2]["date"] + "</span>");
     $( "#new" ).append(data["data"][2]["code"]);
     $( "#new" ).append("<br>");    
                   
