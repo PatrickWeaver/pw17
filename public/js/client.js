@@ -3,7 +3,7 @@ $(function() {
   var loaded = false;
   
   function nextClock(clock) {
-    $( "#new > div" ).hide();
+    $( "#new > div.clock" ).hide();
     if (clock.toString().length === 1){
       var clockStr = "#clock0" + clock;
     } else {
@@ -16,7 +16,7 @@ $(function() {
     if (!loaded){
       setTimeout(function() {nextClock(clock + 1)}, 100);
     } else {
-      $( "#new > div" ).hide();
+      $( "#new > div.clock" ).hide();
     }
   }
   
@@ -25,14 +25,14 @@ $(function() {
 
   $.get( "/data/", function ( data ) {
     loaded = true;
-    $( "#new > div" ).hide();
-    $( "#new" ).append(data["data"][0]["date"]);
+    $( "#new > div.clock" ).hide();
+    $( "#new" ).append("<div class='date'>" + data["data"][0]["date"] + "</div>");
     $( "#new" ).append(data["data"][0]["code"]);
     $( "#new" ).append("<br>");
-    $( "#new" ).append(data["data"][1]["date"]);
+    $( "#new" ).append("<div class='date'>" + data["data"][1]["date"] + "</div>");
     $( "#new" ).append(data["data"][1]["code"]);
     $( "#new" ).append("<br>");
-    $( "#new" ).append(data["data"][2]["date"]);
+    $( "#new" ).append("<div class='date'>" + data["data"][2]["date"] + "</div>");
     $( "#new" ).append(data["data"][2]["code"]);
     $( "#new" ).append("<br>");    
                   

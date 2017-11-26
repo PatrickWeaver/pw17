@@ -38,7 +38,7 @@ li {
   /* border: 1px solid pink; */
 }
 
-h2, h3 {
+#top-header {
   margin: 1em 0 .25em;
 }
 
@@ -54,23 +54,41 @@ h4 {
   font-size: 50%;
 }
 
-#new {
-  
+
+/* New */
+
+#new > div.clock {
+  text-align: center;
+  width: 100%;
 }
 
-
-#old-link {
-  font-size: 60%;
-}
-
-#old-link > a, #new > a {
+#new > a {
   text-decoration: underline;
 }
+
+#new {
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#new .date {
+  font-style: italic;
+}
+
+
+
+
+/* Responsive */
 
 
 @media (max-width: 800px) {
   body {
     font-size: 150%;
+  }
+  
+  #top-header {
+    margin: 1.5em 0 .25em;
   }
   
   ul {
@@ -81,5 +99,10 @@ h4 {
   li {
     margin: .5em 10%;
     width: 80%;
+  }
+  
+  #new-link {
+    padding: .5em;
+    font-size: 75%;
   }
 }
