@@ -1,3 +1,5 @@
+# Version 0.1.0
+
 FROM node:boron
 
 # Create app directory

@@ -72,8 +72,28 @@ h4 {
   margin: 0 auto;
 }
 
-#new .date {
+#new.clock {
+  
+}
+
+#new-items {
+  display: none;
+  font-size: 80%;
+}
+
+#new-items h2 {
+  margin: .25em 0 0;
+  font-weight: 500;
+  font-size: 110%;
+}
+
+#new-items a.item-link {
+  font-size: 75%;
+}
+
+#new-items .date {
   font-style: italic;
+  font-weight: 300;
 }
 
 
