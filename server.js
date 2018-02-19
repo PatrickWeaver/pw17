@@ -11,13 +11,12 @@ app.get("/data", function (req, res) {
   GoogleSpreadsheets({
       key: "19o1rIntdoNmEVa7iG6x9eZc6Ph6UiPrBdbPvI1jiFjY"
   }, function(err, spreadsheet) {
-      spreadsheet.worksheets[0].cells({
+      spreadsheet.worksheets[1].cells({
           // grab all the data
-          range: "R1C1:R50C2"
+          range: "R1C1:R50C5"
       }, function(err, result) {
         // Put in-memory store for now
         data = result.cells;
-
         var keys = [];
         for (var i in data) {
           keys.push(i);
@@ -28,11 +27,15 @@ app.get("/data", function (req, res) {
         var n = [];
         
         for (var j = 1; j < 4; j++) {
-        
-          n.push({
-            code: data[keys[keys.length - j]][1]["value"],
-            date: data[keys[keys.length - j]][2]["value"]
-          })
+          var fields = ["title", "link", "date", "description", "embed"];
+          var currentItem = data[keys[keys.length - j]];
+          var newItem = {};
+          for (var k = 0; k < fields.length; k++) {
+            if (currentItem[k + 1]) {
+              newItem[fields[k]] = currentItem[k + 1]["value"];
+            }
+          }
+          n.push(newItem);
         }
 
         res.send({data: n});
