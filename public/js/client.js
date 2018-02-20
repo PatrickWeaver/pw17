@@ -45,8 +45,9 @@ $(function() {
       }
       if (item["embed"]) {
         $( "#new-items" ).append(item["embed"]);
+        $( "#new-items" ).append("<br>");
       }
-      $( "#new-items" ).append("<br><br><br>");
+      $( "#new-items" ).append("<br><br>");
     }
                   
   });

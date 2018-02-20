@@ -72,10 +72,6 @@ h4 {
   margin: 0 auto;
 }
 
-#new.clock {
-  
-}
-
 #new-items {
   display: none;
   font-size: 80%;
@@ -89,6 +85,12 @@ h4 {
 
 #new-items a.item-link {
   font-size: 75%;
+}
+
+#new-items p {
+  font-size: 75%;
+  margin-bottom: 0;
+  margin-top: .5em;
 }
 
 #new-items .date {
