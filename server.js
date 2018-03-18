@@ -7,11 +7,11 @@ app.use(express.static('public'));
 
 app.get("/data", function (req, res) {
   var data;
-  
+
   GoogleSpreadsheets({
       key: "19o1rIntdoNmEVa7iG6x9eZc6Ph6UiPrBdbPvI1jiFjY"
   }, function(err, spreadsheet) {
-      spreadsheet.worksheets[1].cells({
+      spreadsheet.worksheets[0].cells({
           // grab all the data
           range: "R1C1:R50C5"
       }, function(err, result) {
@@ -21,11 +21,11 @@ app.get("/data", function (req, res) {
         for (var i in data) {
           keys.push(i);
         }
-        
+
         keys.sort();
-        
+
         var n = [];
-        
+
         for (var j = 1; j < 4; j++) {
           var fields = ["title", "link", "date", "description", "embed"];
           var currentItem = data[keys[keys.length - j]];
@@ -41,8 +41,8 @@ app.get("/data", function (req, res) {
         res.send({data: n});
       });
   });
-  
-  
+
+
 });
 
 var listener = app.listen(process.env.PORT, function () {
