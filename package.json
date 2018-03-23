@@ -1,6 +1,6 @@
 {
   "name": "pw17",
-  "version": "0.0.1",
+  "version": "0.1.4",
   "description": "A website directory for Patrick Weaver",
   "main": "server.js",
   "scripts": {
