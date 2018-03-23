@@ -8,7 +8,7 @@ https://docs.google.com/spreadsheets/d/19o1rIntdoNmEVa7iG6x9eZc6Ph6UiPrBdbPvI1ji
 
 Build Docker Container of public folder as static site:
 
-`docker build -t patrickweaver/pw17:0.1.4 .`
+`docker build -t patrickweaver/pw17:0.1.7 .`
 
 Run Docker Container of public folder as static site:
 
