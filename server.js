@@ -45,6 +45,10 @@ app.get("/data", function (req, res) {
 
 });
 
+app.get("/now", function(req, res) {
+  res.redirect("/new");
+}
+
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
