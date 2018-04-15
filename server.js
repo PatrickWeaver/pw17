@@ -2,8 +2,19 @@ var express = require('express');
 var app = express();
 var GoogleSpreadsheets = require("google-spreadsheets");
 
-
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
+
+
+app.get("/", function(req, res) {
+  var host = req.get('host');
+  var domain = host.substring(host.indexOf("."));
+  console.log(domain);
+  res.render("index", {
+    domain: domain
+  });
+});
+
 
 app.get("/data", function (req, res) {
   var data;
