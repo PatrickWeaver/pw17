@@ -1,7 +1,7 @@
 $(function() {
-  
+
   var loaded = false;
-  
+
   function nextClock(clock) {
     $( "#new > div.clock" ).hide();
     if (clock.toString().length === 1){
@@ -19,9 +19,9 @@ $(function() {
       $( "#new > div.clock" ).hide();
     }
   }
-  
+
   nextClock(1);
-    
+
 
   $.get( "/data/", function ( data ) {
     loaded = true;
@@ -35,13 +35,13 @@ $(function() {
       }
       if (item["title"]) {
         if (item["link"]) {
-          $( "#new-items" ).append("<h2><a href='" + item["link"] + "'>" + item["title"] + "</a></h2><a class='item-link' href='" + item["link"] + "'>" + item["link"] + "</a>");
+          $( "#new-items" ).append("<h2><a target='_blank' href='" + item["link"] + "'>" + item["title"] + "</a></h2><a class='item-link' target='_blank' href='" + item["link"] + "'>" + item["link"] + "</a>");
         } else {
           $( "#new-items" ).append("<h2>" + item["title"] + "</h2>");
         }
       }
       if (item["description"]) {
-        $( "#new-items" ).append("<p>" + item["description"] + "</p>"); 
+        $( "#new-items" ).append("<p>" + item["description"] + "</p>");
       }
       if (item["embed"]) {
         $( "#new-items" ).append(item["embed"]);
@@ -49,7 +49,7 @@ $(function() {
       }
       $( "#new-items" ).append("<br><br>");
     }
-                  
+
   });
 
 });

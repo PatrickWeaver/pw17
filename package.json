@@ -1,6 +1,6 @@
 {
   "name": "pw17",
-  "version": "0.0.1",
+  "version": "0.1.7",
   "description": "A website directory for Patrick Weaver",
   "main": "server.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "google-spreadsheets": "^0.5.1"
+    "google-spreadsheets": "^0.5.1",
+    "ejs": "^2.5.8"
   },
   "engines": {
     "node": "8.1.x"
