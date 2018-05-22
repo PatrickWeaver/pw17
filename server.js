@@ -52,12 +52,10 @@ app.get("/data", function (req, res) {
         res.send({data: n});
       });
   });
-
-
 });
 
-app.get("/now", function(req, res) {
-  res.redirect("/new");
+app.get("/new", function(req, res) {
+  res.redirect("/now");
 });
 
 var listener = app.listen(process.env.PORT, function () {
