@@ -27,7 +27,7 @@ $(function() {
     loaded = true;
     $( "#new > div.clock" ).hide();
     $( "#new-items" ).show();
-    var numberOfItems = 3;
+    var numberOfItems = 7;
     for (var i = 0; i < numberOfItems; i++) {
       var item = data["data"][i];
       if (item["date"]) {

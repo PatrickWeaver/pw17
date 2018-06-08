@@ -33,11 +33,11 @@ app.get("/data", function (req, res) {
           keys.push(i);
         }
 
-        keys.sort();
+        //keys.sort();
 
         var n = [];
 
-        for (var j = 1; j < 4; j++) {
+        for (var j = 1; j < keys.length; j++) {
           var fields = ["title", "link", "date", "description", "embed"];
           var currentItem = data[keys[keys.length - j]];
           var newItem = {};
